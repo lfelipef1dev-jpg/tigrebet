@@ -1,0 +1,37 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="inTop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF6C8"/>
+      <stop offset="55%" stop-color="#FFDD55"/>
+      <stop offset="100%" stop-color="#E8A400"/>
+    </linearGradient>
+    <linearGradient id="inBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFD23F"/>
+      <stop offset="60%" stop-color="#F2A600"/>
+      <stop offset="100%" stop-color="#9E6500"/>
+    </linearGradient>
+    <radialGradient id="inShine" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="inDrop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#4a2e00" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <g filter="url(#inDrop)">
+    <!-- ingot (sycee) body -->
+    <path d="M20 82 C20 74 32 70 60 70 C88 70 100 74 100 82 C100 92 84 96 60 96 C36 96 20 92 20 82Z"
+          fill="url(#inBody)" stroke="#8a5a00" stroke-width="2"/>
+    <!-- raised top -->
+    <path d="M34 66 C34 54 44 44 60 44 C76 44 86 54 86 66 C86 72 74 74 60 74 C46 74 34 72 34 66Z"
+          fill="url(#inTop)" stroke="#8a5a00" stroke-width="2"/>
+    <!-- rim groove -->
+    <path d="M30 78 C40 84 80 84 90 78" stroke="#a06a00" stroke-width="2" fill="none" opacity="0.6"/>
+    <!-- highlight -->
+    <ellipse cx="52" cy="56" rx="14" ry="7" fill="url(#inShine)"/>
+    <!-- chinese luck mark 元 -->
+    <text x="60" y="65" font-family="'SimHei','Microsoft YaHei',sans-serif" font-size="16" font-weight="900" text-anchor="middle" fill="#9a6400">元</text>
+    <!-- sparkles -->
+    <path d="M96 58 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2Z" fill="#FFFBE6"/>
+  </g>
+</svg>

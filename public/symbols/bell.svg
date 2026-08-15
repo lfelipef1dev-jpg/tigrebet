@@ -1,0 +1,36 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="beBody" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2B0"/>
+      <stop offset="35%" stop-color="#FFD23F"/>
+      <stop offset="70%" stop-color="#F5A800"/>
+      <stop offset="100%" stop-color="#B36E00"/>
+    </linearGradient>
+    <linearGradient id="beRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B36E00"/>
+      <stop offset="50%" stop-color="#FFE066"/>
+      <stop offset="100%" stop-color="#B36E00"/>
+    </linearGradient>
+    <radialGradient id="beShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="beDrop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#3a2400" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <g filter="url(#beDrop)">
+    <!-- top ring -->
+    <circle cx="60" cy="20" r="7" fill="none" stroke="url(#beRim)" stroke-width="4"/>
+    <!-- bell body -->
+    <path d="M60 27 C40 30 34 52 30 74 C28 84 24 88 24 92 L96 92 C96 88 92 84 90 74 C86 52 80 30 60 27Z"
+          fill="url(#beBody)" stroke="#8a5600" stroke-width="2"/>
+    <!-- bottom rim -->
+    <rect x="22" y="90" width="76" height="9" rx="4.5" fill="url(#beRim)" stroke="#8a5600" stroke-width="1.5"/>
+    <!-- clapper -->
+    <circle cx="60" cy="103" r="7" fill="url(#beBody)" stroke="#8a5600" stroke-width="1.5"/>
+    <!-- highlight -->
+    <path d="M48 38 C42 48 39 62 38 74" stroke="url(#beShine)" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <ellipse cx="50" cy="44" rx="6" ry="9" fill="url(#beShine)"/>
+  </g>
+</svg>

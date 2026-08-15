@@ -1,0 +1,144 @@
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Premium Gold Gradient -->
+    <linearGradient id="premiumGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF8DC;stop-opacity:1" />
+      <stop offset="25%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="75%" style="stop-color:#FF8C00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8860B;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Dark Luxury Gradient -->
+    <linearGradient id="luxuryDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#16213e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f3460;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Glow Effect -->
+    <filter id="premiumGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Shadow Effect -->
+    <filter id="premiumShadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Premium Shield Background -->
+  <g transform="translate(15, 15)">
+    <!-- Outer Shield -->
+    <path d="M5 5 L25 5 L30 10 L30 35 L25 40 L5 40 L0 35 L0 10 Z" 
+          fill="url(#luxuryDark)" 
+          stroke="url(#premiumGold)" 
+          stroke-width="2"
+          filter="url(#premiumShadow)"/>
+    
+    <!-- Inner Shield Accent -->
+    <path d="M7 8 L23 8 L27 12 L27 33 L23 37 L7 37 L3 33 L3 12 Z" 
+          fill="none" 
+          stroke="url(#premiumGold)" 
+          stroke-width="0.5"
+          opacity="0.6"/>
+    
+    <!-- Professional Tiger Mark -->
+    <g transform="translate(8, 12)">
+      <!-- Tiger Head - Geometric -->
+      <path d="M3 0 L11 0 L14 3 L14 10 L11 13 L3 13 L0 10 L0 3 Z" 
+            fill="url(#premiumGold)" 
+            opacity="0.95"/>
+      
+      <!-- Premium Tiger Stripes -->
+      <g stroke="url(#luxuryDark)" stroke-width="1.2" stroke-linecap="round">
+        <path d="M2 2 L4 4 M8 2 L10 4 M2 6 L4 8 M8 6 L10 8 M5 9 L7 11"/>
+        <path d="M1 4 L2 5 M11 4 L12 5" opacity="0.7"/>
+      </g>
+      
+      <!-- Tiger Eyes - Premium -->
+      <circle cx="4" cy="5" r="1.2" fill="url(#luxuryDark)"/>
+      <circle cx="10" cy="5" r="1.2" fill="url(#luxuryDark)"/>
+      
+      <!-- Crown on Tiger -->
+      <path d="M3 0 L5 -2 L7 0 L9 -2 L11 0" 
+            stroke="url(#premiumGold)" 
+            stroke-width="0.8" 
+            fill="none"
+            opacity="0.8"/>
+    </g>
+    
+    <!-- Diamond Accent -->
+    <g transform="translate(20, 28)">
+      <path d="M0 3 L3 0 L6 3 L3 6 Z" 
+            fill="url(#premiumGold)" 
+            opacity="0.7"/>
+    </g>
+  </g>
+  
+  <!-- Premium Brand Typography -->
+  <g transform="translate(55, 25)">
+    <!-- TIGER -->
+    <text x="0" y="0" 
+          font-family="Arial Black, sans-serif" 
+          font-size="24" 
+          font-weight="900" 
+          fill="url(#premiumGold)"
+          filter="url(#premiumGlow)">
+      TIGER
+    </text>
+    
+    <!-- PRO -->
+    <text x="0" y="25" 
+          font-family="Arial Black, sans-serif" 
+          font-size="20" 
+          font-weight="900" 
+          fill="url(#premiumGold)"
+          filter="url(#premiumGlow)">
+      PRO
+    </text>
+    
+    <!-- Premium Line -->
+    <line x1="0" y1="32" x2="45" y2="32" 
+          stroke="url(#premiumGold)" 
+          stroke-width="1" 
+          opacity="0.6"/>
+  </g>
+  
+  <!-- Premium Status Indicators -->
+  <g transform="translate(180, 20)">
+    <!-- VIP Badge -->
+    <circle cx="0" cy="0" r="8" fill="url(#premiumGold)" opacity="0.2"/>
+    <circle cx="0" cy="0" r="6" fill="none" stroke="url(#premiumGold)" stroke-width="1"/>
+    <text x="0" y="4" 
+          font-family="Arial, sans-serif" 
+          font-size="8" 
+          font-weight="bold" 
+          fill="url(#premiumGold)" 
+          text-anchor="middle">
+      VIP
+    </text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <g opacity="0.4">
+    <circle cx="220" cy="15" r="2" fill="url(#premiumGold)"/>
+    <circle cx="225" cy="20" r="1.5" fill="url(#premiumGold)"/>
+    <circle cx="222" cy="25" r="1" fill="url(#premiumGold)"/>
+  </g>
+  
+  <!-- Premium Tagline -->
+  <text x="55" y="55" 
+        font-family="Arial, sans-serif" 
+        font-size="8" 
+        font-weight="300" 
+        fill="#FFD700" 
+        opacity="0.6"
+        letter-spacing="2">
+    PREMIUM GAMING EXPERIENCE
+  </text>
+</svg>

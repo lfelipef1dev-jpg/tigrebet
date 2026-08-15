@@ -1,0 +1,36 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="orBody" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#FFC24B"/>
+      <stop offset="45%" stop-color="#FF9A1E"/>
+      <stop offset="100%" stop-color="#D95E00"/>
+    </radialGradient>
+    <radialGradient id="orShine" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orLeaf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6FD44A"/>
+      <stop offset="100%" stop-color="#2E8B22"/>
+    </linearGradient>
+    <filter id="orDrop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#5c1c00" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <g filter="url(#orDrop)">
+    <circle cx="60" cy="66" r="40" fill="url(#orBody)" stroke="#8a3800" stroke-width="2"/>
+    <!-- pores -->
+    <g fill="#c25400" opacity="0.35">
+      <circle cx="45" cy="55" r="1.3"/><circle cx="62" cy="48" r="1.3"/><circle cx="78" cy="60" r="1.3"/>
+      <circle cx="52" cy="72" r="1.3"/><circle cx="70" cy="80" r="1.3"/><circle cx="42" cy="78" r="1.3"/>
+      <circle cx="83" cy="75" r="1.3"/><circle cx="60" cy="90" r="1.3"/>
+    </g>
+    <!-- glossy highlight -->
+    <ellipse cx="48" cy="50" rx="18" ry="13" fill="url(#orShine)"/>
+    <!-- stem -->
+    <rect x="57" y="20" width="6" height="12" rx="3" fill="#7a4a1e"/>
+    <!-- leaf -->
+    <path d="M63 26 C80 16 96 24 96 24 C96 24 90 44 70 40 C64 38 61 30 63 26Z" fill="url(#orLeaf)" stroke="#1e6b16" stroke-width="1.5"/>
+    <path d="M68 32 C78 28 90 26 90 26" stroke="#bff7a0" stroke-width="1.4" fill="none" opacity="0.7"/>
+  </g>
+</svg>

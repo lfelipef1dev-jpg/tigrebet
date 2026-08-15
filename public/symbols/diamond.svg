@@ -1,0 +1,43 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="diTop" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BFFCFF"/>
+      <stop offset="50%" stop-color="#5FE3F2"/>
+      <stop offset="100%" stop-color="#22A8C7"/>
+    </linearGradient>
+    <linearGradient id="diLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#66D8EA"/>
+      <stop offset="100%" stop-color="#1C7FA0"/>
+    </linearGradient>
+    <linearGradient id="diRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#37B9D6"/>
+      <stop offset="100%" stop-color="#0E5C7A"/>
+    </linearGradient>
+    <linearGradient id="diCenter" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8FEFF"/>
+      <stop offset="100%" stop-color="#2FB4D0"/>
+    </linearGradient>
+    <filter id="diDrop" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#052836" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+  <g filter="url(#diDrop)">
+    <!-- crown facets -->
+    <polygon points="30,42 90,42 78,58 42,58" fill="url(#diTop)" stroke="#0e5c7a" stroke-width="1.5"/>
+    <polygon points="30,42 42,58 30,58" fill="#7fe8f7" stroke="#0e5c7a" stroke-width="1.2"/>
+    <polygon points="90,42 90,58 78,58" fill="#2ba0bf" stroke="#0e5c7a" stroke-width="1.2"/>
+    <!-- pavilion (bottom) -->
+    <polygon points="30,58 42,58 60,96 30,58" fill="url(#diLeft)" stroke="#0e5c7a" stroke-width="1.5"/>
+    <polygon points="90,58 78,58 60,96 90,58" fill="url(#diRight)" stroke="#0e5c7a" stroke-width="1.5"/>
+    <polygon points="42,58 78,58 60,96" fill="url(#diCenter)" stroke="#0e5c7a" stroke-width="1.5"/>
+    <!-- facet lines -->
+    <line x1="42" y1="58" x2="52" y2="42" stroke="#bff6ff" stroke-width="1" opacity="0.7"/>
+    <line x1="78" y1="58" x2="68" y2="42" stroke="#bff6ff" stroke-width="1" opacity="0.7"/>
+    <line x1="60" y1="42" x2="60" y2="58" stroke="#bff6ff" stroke-width="1" opacity="0.6"/>
+    <!-- top shine -->
+    <polygon points="34,44 50,44 46,52 37,52" fill="#ffffff" opacity="0.55"/>
+    <!-- sparkles -->
+    <path d="M96 40 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6Z" fill="#ffffff"/>
+    <path d="M22 62 l1.2 3 3 1.2 -3 1.2 -1.2 3 -1.2 -3 -3 -1.2 3 -1.2Z" fill="#ffffff" opacity="0.8"/>
+  </g>
+</svg>

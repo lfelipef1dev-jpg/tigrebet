@@ -1,0 +1,107 @@
+<svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="tmFur" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#FF9A3D"/>
+      <stop offset="45%" stop-color="#FF6B18"/>
+      <stop offset="100%" stop-color="#D63F00"/>
+    </radialGradient>
+    <linearGradient id="tmLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCE5C"/>
+      <stop offset="100%" stop-color="#FF8C00" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="tmEye" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE97A"/>
+      <stop offset="100%" stop-color="#F5C100"/>
+    </linearGradient>
+    <radialGradient id="tmGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD700" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FF4500" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="tmShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#3a0f00" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <!-- Aura glow -->
+  <circle cx="110" cy="115" r="95" fill="url(#tmGlow)" />
+
+  <g filter="url(#tmShadow)">
+    <!-- Head shape -->
+    <path d="M110 28
+             C75 28 52 55 48 82
+             C45 105 52 130 72 148
+             C82 158 95 168 110 175
+             C125 168 138 158 148 148
+             C168 130 175 105 172 82
+             C168 55 145 28 110 28Z"
+          fill="url(#tmFur)" stroke="#9a2a00" stroke-width="1.5"/>
+
+    <!-- Light sheen on forehead -->
+    <path d="M85 55 C100 42 120 42 135 55 C130 75 120 80 110 80 C100 80 90 75 85 55Z"
+          fill="url(#tmLight)" opacity="0.55"/>
+
+    <!-- Ears -->
+    <path d="M58 50 L45 20 L78 40Z" fill="#FF6B18" stroke="#9a2a00" stroke-width="1.5"/>
+    <path d="M162 50 L175 20 L142 40Z" fill="#FF6B18" stroke="#9a2a00" stroke-width="1.5"/>
+    <path d="M55 42 L50 28 L70 40Z" fill="#4a1a00" opacity="0.8"/>
+    <path d="M165 42 L170 28 L150 40Z" fill="#4a1a00" opacity="0.8"/>
+
+    <!-- Stripes (black) -->
+    <g stroke="#2a0a00" stroke-width="4" stroke-linecap="round" fill="none">
+      <path d="M75 58 L92 75"/>
+      <path d="M145 58 L128 75"/>
+      <path d="M62 92 L88 102"/>
+      <path d="M158 92 L132 102"/>
+      <path d="M72 122 L96 130"/>
+      <path d="M148 122 L124 130"/>
+      <path d="M95 148 L110 160"/>
+      <path d="M125 148 L110 160"/>
+    </g>
+
+    <!-- Forehead tuft -->
+    <path d="M110 42 C103 38 97 42 100 50 C103 46 110 48 110 48 C110 48 117 46 120 50 C123 42 117 38 110 42Z"
+          fill="#FFCE5C" stroke="#9a2a00" stroke-width="1"/>
+
+    <!-- Eyes (intense) -->
+    <g>
+      <path d="M70 92 C80 82 98 85 102 96 C92 100 78 100 70 92Z" fill="#fff"/>
+      <path d="M150 92 C140 82 122 85 118 96 C128 100 142 100 150 92Z" fill="#fff"/>
+      <circle cx="88" cy="94" r="7" fill="url(#tmEye)"/>
+      <circle cx="132" cy="94" r="7" fill="url(#tmEye)"/>
+      <circle cx="89" cy="92" r="2.5" fill="#fff"/>
+      <circle cx="133" cy="92" r="2.5" fill="#fff"/>
+      <ellipse cx="86" cy="94" rx="9" ry="6" fill="none" stroke="#2a0a00" stroke-width="2"/>
+      <ellipse cx="134" cy="94" rx="9" ry="6" fill="none" stroke="#2a0a00" stroke-width="2"/>
+      <!-- eyebrow -->
+      <path d="M75 80 Q88 72 100 80" stroke="#2a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M145 80 Q132 72 120 80" stroke="#2a0a00" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+
+    <!-- Nose -->
+    <path d="M102 118 L118 118 L110 132 Z" fill="#c23600" stroke="#6a1a00" stroke-width="1.5"/>
+    <ellipse cx="110" cy="116" rx="10" ry="5" fill="#ff9a3d" opacity="0.6"/>
+
+    <!-- Muzzle / mouth area -->
+    <path d="M90 132 Q110 145 130 132" stroke="#9a2a00" stroke-width="2" fill="none"/>
+    <path d="M95 128 Q110 135 125 128" stroke="#fff" stroke-width="2" fill="none" opacity="0.35"/>
+
+    <!-- Open mouth with fangs -->
+    <path d="M95 140 Q110 162 125 140 Q125 150 110 155 Q95 150 95 140Z" fill="#3a0a00"/>
+    <path d="M98 142 L103 155 L108 142Z" fill="#fff"/>
+    <path d="M112 142 L117 155 L122 142Z" fill="#fff"/>
+    <path d="M106 150 L114 150 L110 156Z" fill="#ff4d4d"/>
+
+    <!-- Whiskers -->
+    <g stroke="#fff" stroke-width="1.2" opacity="0.6" fill="none" stroke-linecap="round">
+      <path d="M70 118 L42 110"/>
+      <path d="M70 124 L40 124"/>
+      <path d="M70 130 L44 138"/>
+      <path d="M150 118 L178 110"/>
+      <path d="M150 124 L180 124"/>
+      <path d="M150 130 L176 138"/>
+    </g>
+
+    <!-- Chin fur -->
+    <path d="M105 158 L110 168 L115 158" fill="#FFCE5C" stroke="#9a2a00" stroke-width="1"/>
+  </g>
+</svg>
