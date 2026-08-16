@@ -106,13 +106,16 @@ interface StoreState {
   setLoading: (loading: boolean) => void;
 }
 
+const isDemoInitial = typeof window !== 'undefined' && (window.location.hostname.includes('expostacker.com.br') || window.location.hostname.includes('pages.dev'));
+const demoBalance = typeof window !== 'undefined' ? parseFloat(localStorage.getItem('demo_balance') || '10000') : 10000;
+
 const initialState = {
   user: {
     uid: null,
     token: null,
     mobile: undefined,
     username: undefined,
-    balance: { ETC: 0, ETH: 0, BTC: 0 },
+    balance: { ETC: demoBalance, ETH: demoBalance, BTC: demoBalance },
     vipLevel: 0,
     refCode: undefined,
     userPayPwd: undefined,
@@ -180,12 +183,18 @@ export const useStore = create<StoreState>()(
       // Game actions
       setGame: (game) => set((state) => ({ game: { ...state.game, ...game } })),
       setSelectedCoin: (selectedCoin: 'ETC' | 'ETH' | 'BTC') => set((state) => ({ game: { ...state.game, selectedCoin } })),
-      setBalance: (coin, amount) => set((state) => ({
-        game: {
-          ...state.game,
-          balance: { ...state.game.balance, [coin]: parseFloat(String(amount)) || 0 }
+      setBalance: (coin, amount) => set((state) => {
+        const value = parseFloat(String(amount)) || 0;
+        if (typeof window !== 'undefined' && (window.location.hostname.includes('expostacker.com.br') || window.location.hostname.includes('pages.dev'))) {
+          localStorage.setItem('demo_balance', String(value));
         }
-      })),
+        return {
+          game: {
+            ...state.game,
+            balance: { ...state.game.balance, [coin]: value }
+          }
+        };
+      }),
       addBetHistory: (bet) => set((state) => ({
         game: {
           ...state.game,
