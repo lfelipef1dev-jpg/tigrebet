@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useStore } from './store';
+import { useStore } from '../store';
 
 export default function DemoProvider({ children }: { children: React.ReactNode }) {
   const { user, setUser, game, setGame } = useStore();
