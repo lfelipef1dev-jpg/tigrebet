@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Orbitron } from 'next/font/google'
 import './globals-premium.css'
 import ToastProvider from './providers/ToastProvider'
+import DemoProvider from './providers/DemoProvider'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -43,8 +44,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${orbitron.variable}`}>
       <body className="premium-grid-bg min-h-screen">
-        <ToastProvider />
-        {children}
+        <DemoProvider>
+          <ToastProvider />
+          {children}
+        </DemoProvider>
       </body>
     </html>
   )
