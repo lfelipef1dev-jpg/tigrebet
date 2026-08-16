@@ -134,9 +134,14 @@ export const tigerAPI = {
 
 // ===== CRASH =====
 export const crashAPI = {
-  playCrash: (data: Record<string, unknown>) => isDemo
-    ? Promise.resolve({ data: { code: 200, data: { multiplier: +(1.01 + Math.random() * 4.99).toFixed(2), crashed: Math.random() > 0.45, balance: 10000 } } })
-    : api.post('/crash/play', data),
+  playCrash: (data: Record<string, unknown>) => {
+    if (!isDemo) return api.post('/crash/play', data);
+    const { amount, autoCashout } = data as { amount: number; autoCashout: number };
+    const crashPoint = +(1.01 + Math.random() * 4.99).toFixed(2);
+    const win = crashPoint >= autoCashout ? amount * autoCashout : 0;
+    const balance = 10000 - amount + win;
+    return Promise.resolve({ data: { code: 200, data: { crashPoint, win, balance, autoCashout } } });
+  },
 };
 
 // ===== PLINKO =====
