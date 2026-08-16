@@ -106,17 +106,16 @@ interface StoreState {
   setLoading: (loading: boolean) => void;
 }
 
-const isDemoInitial = typeof window !== 'undefined' && (window.location.hostname.includes('expostacker.com.br') || window.location.hostname.includes('pages.dev'));
-const demoBalance = typeof window !== 'undefined' ? parseFloat(localStorage.getItem('demo_balance') || '10000') : 10000;
+const DEMO_BALANCE = 10000;
 
 const initialState = {
   user: {
     uid: null,
     token: null,
     mobile: undefined,
-    username: undefined,
-    balance: { ETC: demoBalance, ETH: demoBalance, BTC: demoBalance },
-    vipLevel: 0,
+    username: 'Demo Player',
+    balance: { ETC: DEMO_BALANCE, ETH: DEMO_BALANCE, BTC: DEMO_BALANCE },
+    vipLevel: 3,
     refCode: undefined,
     userPayPwd: undefined,
   },
@@ -133,7 +132,7 @@ const initialState = {
   },
   game: {
     selectedCoin: 'ETC' as 'ETC' | 'ETH' | 'BTC',
-    balance: { ETC: 0, ETH: 0, BTC: 0 },
+    balance: { ETC: DEMO_BALANCE, ETH: DEMO_BALANCE, BTC: DEMO_BALANCE },
     currentPeriod: '',
     lastResult: 0,
     trend: [],
